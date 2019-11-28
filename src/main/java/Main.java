@@ -25,8 +25,8 @@ public class Main {
         URL url = new URL("https://weckdengeparden-57-services.cloud.itandtel.at/challenge/1/answer");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("POST");
-        con.setRequestProperty("Content-Type", "application/json; utf-8");
-        con.setRequestProperty("Accept", "text/plain");
+        con.setRequestProperty("Content-Type", "application/json");
+        con.setRequestProperty("Accept", "application/json");
         con.setDoOutput(true);
 
         try (OutputStream os = con.getOutputStream()) {
@@ -48,6 +48,7 @@ public class Main {
 
     /**
      * Read the file and encode it to a base64 string
+     *
      * @param fileName The file which we want to read and encode
      * @return a basic base64 string
      * @throws IOException
@@ -64,6 +65,7 @@ public class Main {
 
     /**
      * Load a file and store it in a bytearray
+     *
      * @param file the file which we want to read
      * @return a byte array
      * @throws IOException
